@@ -57,28 +57,36 @@ p {
 }
 
 .postit1 {
-  transition: rotate(-2deg);
+  transform: rotate(-2deg);
+  animation: hangPostIt 400ms ease-out 0s;
 }
 .postit2 {
   transform: rotate(6deg);
+  animation: hangPostIt 500ms ease-out 0s;
 }
 .postit3 {
   transform: rotate(-6deg);
+  animation: hangPostIt 900ms ease-out 0s;
 }
 .postit4 {
   transform: rotate(9deg);
+  animation: hangPostIt 1200ms ease-out 0s;
 }
 .postit5 {
   transform: rotate(-3.5deg);
+  animation: hangPostIt 1300ms ease-out 0s;
 }
 .postit6 {
   transform: rotate(-8deg);
+  animation: hangPostIt 1500ms ease-out 0s;
 }
 .postit7 {
   transform: rotate(-3deg) translate(0px, 10px);
+  animation: hangPostIt 1700ms ease-out 0s;
 }
 .postit8 {
   transform: rotate(5deg) translate(0px, 10px);
+  animation: hangPostIt 1800ms ease-out 0s;
 }
 
 /* HOVER EFFECT */
@@ -87,4 +95,15 @@ p {
   transform: scale(1.3);
   z-index: 1;
   box-shadow: 8px 10px 10px black, inset 0px -52px 56px 0px #5657677a;
+}
+
+/* ANIMATION TO HANG POSTIT  */
+
+@keyframes hangPostIt {
+  from {
+    transform: translate(200px, 1000px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
